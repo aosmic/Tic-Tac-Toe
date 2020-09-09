@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="58.7687mm" height="83.0444mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 692 978"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#373435;stroke-width:47.0913}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2674972657936">
+   <path class="fil0 str0" d="M178 677l-154 0 0 -177c0,-65 53,-118 117,-118l56 0c40,34 92,54 149,54 57,0 108,-20 149,-54l56 0c64,0 117,53 117,118l0 177 -154 0"/>
+   <circle class="fil0 str0" cx="342" cy="200" r="176"/>
+   <polyline class="fil0 str0" points="514,551 514,954 178,954 178,551 "/>
+   <line class="fil0 str0" x1="262" y1="773" x2="429" y2= "607" />
+   <line class="fil0 str0" x1="429" y1="773" x2="262" y2= "607" />
+  </g>
+ </g>
+</svg>
