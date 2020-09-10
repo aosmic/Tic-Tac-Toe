@@ -10,12 +10,24 @@ MainWindow::MainWindow(QWidget *parent)
     currentPlayer=playerX;
     setLabelText();
     setPlayerStyleSheet();
+    button1ClickEnabled=true;
+    button2ClickEnabled=true;
+    button3ClickEnabled=true;
+    button4ClickEnabled=true;
+    button5ClickEnabled=true;
+    button6ClickEnabled=true;
+    button7ClickEnabled=true;
+    button8ClickEnabled=true;
+    button9ClickEnabled=true;
+    connect(ui->actionNew_game,SIGNAL(triggered()), this, SLOT(reset()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
 
 QString MainWindow::setIcon()
 {
@@ -88,109 +100,171 @@ void MainWindow::winner()
 
 void MainWindow::on_button1_1_released()
 {
-    ui->button1_1->setText("");
-    ui->button1_1->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[0][0]=currentPlayer;
-    winner();
+    if(button1ClickEnabled){
+        ui->button1_1->setText("");
+        ui->button1_1->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[0][0]=currentPlayer;
+        winner();
+    }
+    button1ClickEnabled=false;
 }
 
 
 void MainWindow::on_button1_2_released()
 {
-    ui->button1_2->setText("");
-    ui->button1_2->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[0][1]=currentPlayer;
-    winner();
+    if(button2ClickEnabled){
+        ui->button1_2->setText("");
+        ui->button1_2->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[0][1]=currentPlayer;
+        winner();
+    }
+    button2ClickEnabled=false;
 }
 
 void MainWindow::on_button1_3_released()
 {
-    ui->button1_3->setText("");
-    ui->button1_3->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[0][2]=currentPlayer;
-    winner();
+    if(button3ClickEnabled){
+        ui->button1_3->setText("");
+        ui->button1_3->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[0][2]=currentPlayer;
+        winner();
+    }
+    button3ClickEnabled=false;
 }
 
 void MainWindow::on_button2_1_released()
 {
-    ui->button2_1->setText("");
-    ui->button2_1->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[1][0]=currentPlayer;
-    winner();
+    if(button4ClickEnabled){
+        ui->button2_1->setText("");
+        ui->button2_1->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[1][0]=currentPlayer;
+        winner();
+    }
+    button4ClickEnabled=false;
 }
 
 void MainWindow::on_button2_2_released()
 {
-    ui->button2_2->setText("");
-    ui->button2_2->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[1][1]=currentPlayer;
-    winner();
+    if(button5ClickEnabled){
+        ui->button2_2->setText("");
+        ui->button2_2->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[1][1]=currentPlayer;
+        winner();
+    }
+    button5ClickEnabled=false;
 }
 
 void MainWindow::on_button2_3_released()
 {
-    ui->button2_3->setText("");
-    ui->button2_3->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[1][2]=currentPlayer;
-    winner();
+    if(button6ClickEnabled){
+        ui->button2_3->setText("");
+        ui->button2_3->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[1][2]=currentPlayer;
+        winner();
+    }
+    button6ClickEnabled=false;
 }
 
 void MainWindow::on_button3_1_released()
 {
-    ui->button3_1->setText("");
-    ui->button3_1->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[2][0]=currentPlayer;
-    winner();
+    if(button7ClickEnabled){
+        ui->button3_1->setText("");
+        ui->button3_1->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[2][0]=currentPlayer;
+        winner();
+    }
+    button7ClickEnabled=false;
 }
 
 void MainWindow::on_button3_2_released()
 {
-    ui->button3_2->setText("");
-    ui->button3_2->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[2][1]=currentPlayer;
-    winner();
+    if(button8ClickEnabled){
+        ui->button3_2->setText("");
+        ui->button3_2->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[2][1]=currentPlayer;
+        winner();
+    }
+    button8ClickEnabled=false;
 }
 
 void MainWindow::on_button3_3_released()
 {
-    ui->button3_3->setText("");
-    ui->button3_3->setIcon(QIcon(setIcon()));
-    player=!player;
-    setCurrentPlayer();
-    setLabelText();
-    setPlayerStyleSheet();
-    matrix[2][2]=currentPlayer;
-    winner();
+    if(button9ClickEnabled){
+        ui->button3_3->setText("");
+        ui->button3_3->setIcon(QIcon(setIcon()));
+        player=!player;
+        setCurrentPlayer();
+        setLabelText();
+        setPlayerStyleSheet();
+        matrix[2][2]=currentPlayer;
+        winner();
+    }
+    button9ClickEnabled=false;
+}
+
+void MainWindow::reset()
+{
+    button1ClickEnabled=true;
+    button2ClickEnabled=true;
+    button3ClickEnabled=true;
+    button4ClickEnabled=true;
+    button5ClickEnabled=true;
+    button6ClickEnabled=true;
+    button7ClickEnabled=true;
+    button8ClickEnabled=true;
+    button9ClickEnabled=true;
+    ui->button1_1->setText("Shortcut[1]");
+    ui->button1_1->setIcon(QIcon(""));
+    ui->button1_2->setText("Shortcut[1]");
+    ui->button1_2->setIcon(QIcon(""));
+    ui->button1_3->setText("Shortcut[1]");
+    ui->button1_3->setIcon(QIcon(""));
+    ui->button2_1->setText("Shortcut[1]");
+    ui->button2_1->setIcon(QIcon(""));
+    ui->button2_2->setText("Shortcut[1]");
+    ui->button2_2->setIcon(QIcon(""));
+    ui->button2_3->setText("Shortcut[1]");
+    ui->button2_3->setIcon(QIcon(""));
+    ui->button3_1->setText("Shortcut[1]");
+    ui->button3_1->setIcon(QIcon(""));
+    ui->button3_2->setText("Shortcut[1]");
+    ui->button3_2->setIcon(QIcon(""));
+    ui->button3_3->setText("Shortcut[1]");
+    ui->button3_3->setIcon(QIcon(""));
+    for(int i=0;i<3;i++)
+        for(int j=0;j<3;j++)
+            matrix[i][j]=' ';
+
 }

@@ -40,6 +40,8 @@ private slots:
 
     void on_button3_3_released();
 
+    void reset();
+
 private:
     Ui::MainWindow *ui;
     char playerX='X';
@@ -47,5 +49,7 @@ private:
     char currentPlayer;
     bool player;
     char matrix[3][3];
+    bool button1ClickEnabled,button2ClickEnabled,button3ClickEnabled,button4ClickEnabled,
+    button5ClickEnabled,button6ClickEnabled,button7ClickEnabled,button8ClickEnabled,button9ClickEnabled;
 };
 #endif // MAINWINDOW_H
