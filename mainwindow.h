@@ -17,6 +17,9 @@ public:
     QString setIcon();
     void setCurrentPlayer();
     void setLabelText();
+    void setPlayerStyleSheet();
+    bool checkWinner();
+    void winner();
 
 private slots:
     void on_button1_1_released();
@@ -39,8 +42,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    enum{playerX, playerO};
-    int currentPlayer;
+    char playerX='X';
+    char playerO='O';
+    char currentPlayer;
     bool player;
+    char matrix[3][3];
 };
 #endif // MAINWINDOW_H
