@@ -20,6 +20,7 @@ public:
     void setPlayerStyleSheet();
     bool checkWinner();
     void winner();
+    void showScore();
 
 private slots:
     void on_button1_1_released();
@@ -44,6 +45,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int scoreX, scoreO;
     char playerX='X';
     char playerO='O';
     char currentPlayer;
