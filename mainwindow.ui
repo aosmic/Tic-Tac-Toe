@@ -389,7 +389,7 @@
    <widget class="QLabel" name="scoreLabel">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>280</x>
       <y>90</y>
       <width>111</width>
       <height>41</height>
@@ -423,6 +423,7 @@
     </property>
     <addaction name="actionNew_game"/>
     <addaction name="actionExit"/>
+    <addaction name="actionReset_score"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -456,6 +457,11 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionReset_score">
+   <property name="text">
+    <string>Reset score</string>
    </property>
   </action>
  </widget>

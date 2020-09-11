@@ -4,5 +4,6 @@
         <file>graphics/oks.svg</file>
         <file>graphics/OPlayer.svg</file>
         <file>graphics/XPlayer.svg</file>
+        <file>graphics/appIcon.svg</file>
     </qresource>
 </RCC>

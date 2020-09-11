@@ -43,6 +43,8 @@ private slots:
 
     void reset();
 
+    void resetScore();
+
 private:
     Ui::MainWindow *ui;
     int scoreX, scoreO;

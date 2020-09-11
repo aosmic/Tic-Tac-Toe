@@ -23,9 +23,11 @@ MainWindow::MainWindow(QWidget *parent)
     button8ClickEnabled=true;
     button9ClickEnabled=true;
 
+    setWindowIcon(QIcon(":/graphics/appIcon.svg"));
     showScore();
 
     connect(ui->actionNew_game,SIGNAL(triggered()), this, SLOT(reset()));
+    connect(ui->actionReset_score, SIGNAL(triggered()),this, SLOT(resetScore()));
 }
 
 MainWindow::~MainWindow()
@@ -106,8 +108,7 @@ void MainWindow::winner()
 
         showScore();
 
-        QMessageBox::information(this, "Winner", "GAME OVER");
-        reset();
+        QMessageBox::information(this, "Winner", "GAME OVER\nWe have a winner");
         reset();
     }
 }
@@ -128,9 +129,9 @@ void MainWindow::on_button1_1_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[0][0]=currentPlayer;
-        winner();
     }
     button1ClickEnabled=false;
+    winner();
 }
 
 
@@ -144,9 +145,9 @@ void MainWindow::on_button1_2_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[0][1]=currentPlayer;
-        winner();
     }
     button2ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button1_3_released()
@@ -159,9 +160,9 @@ void MainWindow::on_button1_3_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[0][2]=currentPlayer;
-        winner();
     }
     button3ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button2_1_released()
@@ -174,9 +175,9 @@ void MainWindow::on_button2_1_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[1][0]=currentPlayer;
-        winner();
     }
     button4ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button2_2_released()
@@ -189,9 +190,9 @@ void MainWindow::on_button2_2_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[1][1]=currentPlayer;
-        winner();
     }
     button5ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button2_3_released()
@@ -204,9 +205,9 @@ void MainWindow::on_button2_3_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[1][2]=currentPlayer;
-        winner();
     }
     button6ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button3_1_released()
@@ -219,9 +220,9 @@ void MainWindow::on_button3_1_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[2][0]=currentPlayer;
-        winner();
     }
     button7ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button3_2_released()
@@ -234,9 +235,9 @@ void MainWindow::on_button3_2_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[2][1]=currentPlayer;
-        winner();
     }
     button8ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::on_button3_3_released()
@@ -249,9 +250,9 @@ void MainWindow::on_button3_3_released()
         setLabelText();
         setPlayerStyleSheet();
         matrix[2][2]=currentPlayer;
-        winner();
     }
     button9ClickEnabled=false;
+    winner();
 }
 
 void MainWindow::reset()
@@ -297,4 +298,11 @@ void MainWindow::reset()
         for(int j=0;j<3;j++)
             matrix[i][j]=' ';
 
+}
+
+void MainWindow::resetScore()
+{
+    scoreX=0;
+    scoreO=0;
+    showScore();
 }
